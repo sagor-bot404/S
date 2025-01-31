@@ -11,7 +11,7 @@ const fs = require("fs");
 //const login = require('hut-chat-api');
 const login = require('ws3-fca');
 const moment = require("moment-timezone");
-const logger = require("./ryukoc.js");
+const logger = require("./Sagorc.js");
 const gradient = require("gradient-string");
 const process = require("process");
 const listbuiltinModules = require("module").builtinModules;
@@ -71,8 +71,8 @@ global.data = new Object({
   allCurrenciesID: new Array(),
   allThreadID: new Array(),
 });
-global.utils = require("./ryukod.js");
-global.loading = require("./ryukoc.js");
+global.utils = require("./Sagord.js");
+global.loading = require("./Sagorc.js");
 global.nodemodule = new Object();
 global.config = new Object();
 global.ryuko = new Object();
@@ -124,15 +124,15 @@ var configValue;
 try {
   global.client.configPath = join(global.client.mainPath, "../../Sagor.json");
   configValue = require(global.client.configPath);
-  logger.loader(`deploying ${chalk.blueBright('ryuko')} file`);
+  logger.loader(`deploying ${chalk.blueBright('Sagor')} file`);
 } catch (e) {
   return logger.loader(`cant read ${chalk.blueBright('ryuko')} file`, "error");
 }
 try {
   for (const key in configValue) global.config[key] = configValue[key];
-  logger.loader(`deployed ${chalk.blueBright('ryuko')} file`);
+  logger.loader(`deployed ${chalk.blueBright('Sagor')} file`);
 } catch (e) {
-  return logger.loader(`can't deploy ${chalk.blueBright('ryuko')} file`, "error")
+  return logger.loader(`can't deploy ${chalk.blueBright('Sagor')} file`, "error")
 }
 
 var approvedListsValue;
